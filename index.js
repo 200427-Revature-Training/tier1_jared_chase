@@ -3,9 +3,17 @@ dataType = (a) => {
     return typeof a;
 }
 
-product = (a,b) => {
-    return a*b;
-} 
+//UPDATED PART B
+product = (...args) => {
+    let result = 1;
+    let i;
+    for(i = 0; i<args.length; i++) {
+        result*=args[i];
+    }
+    console.log('result: ' + result);
+    return result;
+}
+product(1,2,3,4);
 
 sumArray = (a) => {
     let sum = 0;
